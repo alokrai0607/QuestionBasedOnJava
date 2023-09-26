@@ -12,11 +12,12 @@ public class Factorial {
 
 		int n = sc.nextInt();
 
-		long value = 1; // Use long data type
+		long value = 1; 
 
 		for (int i = 1; i <= n; i++) {
 			value = value * i;
 		}
+		
 		System.out.println("Factorial value of " + n + " is " + value);
 
 	}

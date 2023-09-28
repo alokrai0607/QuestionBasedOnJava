@@ -8,7 +8,8 @@ public class TableGenrator {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("Pass any value in simple Integer you want , you will found table from 1 to 10 of your Number :");
+		System.out.println("Pass any value in simple Integer you want , "
+				          +"you will found table from 1 to 10 of your Number :");
 		
 		int n = sc.nextInt();
 		

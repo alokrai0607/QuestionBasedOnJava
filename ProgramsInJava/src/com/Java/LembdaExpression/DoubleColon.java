@@ -4,18 +4,17 @@ interface Dc {
 	void show();
 }
 
-public class DoubleColon {
-	
+class ABC {
 	public static void display() {
 		System.out.println("Hello Java");
 	}
+}
+
+public class DoubleColon {
 
 	public static void main(String[] args) {
-	
-		Dc dc = DoubleColon :: display;
-	
+		Dc dc = ABC::display;
 		dc.show();
-
 	}
-
+	
 }

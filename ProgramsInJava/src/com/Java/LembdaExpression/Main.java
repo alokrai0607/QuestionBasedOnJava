@@ -15,11 +15,11 @@ public class Main {
 //		x.show();
 //
 //	}
-	
+
 	public static void main(String[] args) {
 
-		Lem x = () ->  System.out.println("Hello Lembda without Param");
-		
+		Lem x = () -> System.out.println("Hello Lembda without Param");
+
 		x.show();
 
 	}

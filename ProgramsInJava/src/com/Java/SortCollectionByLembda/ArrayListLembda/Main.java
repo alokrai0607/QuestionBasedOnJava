@@ -26,14 +26,13 @@ public class Main {
 //		};
 //		Collections.sort(emp, comp);
 //		System.out.println(emp);
-		
-		
-		
+
 		// Same thing with Lambda Expression .
 
 		Collections.sort(emp, (Employee e1, Employee e2) -> e1.getEmpName().compareTo(e2.getEmpName()));
 
 		System.out.println(emp);
+
 	}
 
 }

@@ -6,6 +6,7 @@ public class bInaryOprator {
 
 	public static void main(String[] args) {
 
+		
 		BinaryOperator<String> he = (x, y) -> (x + " " + y);
 		System.out.println(he.apply("Hello", "Boy"));
 

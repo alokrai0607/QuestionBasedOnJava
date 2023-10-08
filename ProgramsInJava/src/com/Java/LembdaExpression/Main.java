@@ -7,11 +7,19 @@ interface Lem {
 
 public class Main {
 
+//	public static void main(String[] args) {
+//
+//		Lem x = () -> {
+//			System.out.println("Hello Lembda");
+//		};
+//		x.show();
+//
+//	}
+	
 	public static void main(String[] args) {
 
-		Lem x = () -> {
-			System.out.println("Hello Lembda");
-		};
+		Lem x = () ->  System.out.println("Hello Lembda without Param");
+		
 		x.show();
 
 	}

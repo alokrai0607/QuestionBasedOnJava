@@ -1,12 +1,12 @@
 package DSA.SortingAlgos;
 
-public class BubbleSortAlgo {
+public class BubbleSortAlgoForString {
 
 	public static void main(String[] args) {
 
-		int[] a = { 36, 19, 29, 12, 5 };
+		String[] a = { "Alok", "Ravi" , "Shiva", "Shashank" , "Mahima" };
 
-		int temp;
+		String temp;
 
 		for (int i = 0; i < a.length; i++) {   // for number of rounds .
 
@@ -14,7 +14,7 @@ public class BubbleSortAlgo {
 
 			for (int j = 0; j < a.length - 1 - i; j++) { // for compare the elements .
 
-				if (a[j] > a[j + 1]) {
+				if (a[j].compareTo (a[j+1])>0) {
 
 					temp = a[j];
 					a[j] = a[j + 1];
@@ -28,8 +28,8 @@ public class BubbleSortAlgo {
 				break;
 			}
 		}
-		for (int i : a) {
-			System.out.println(i + " ");
+		for (String i : a) {
+			System.out.print(i + " ");
 		}
 
 	}

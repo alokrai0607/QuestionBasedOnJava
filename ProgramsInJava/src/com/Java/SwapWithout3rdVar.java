@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class SwapWithout3rdVar {
 
 	public static void main(String[] args) {
+		
 		int x, y;
 
 		Scanner sc = new Scanner(System.in);

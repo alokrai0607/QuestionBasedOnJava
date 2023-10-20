@@ -15,3 +15,10 @@
  It used for building restfull web services .
  It will be return data in HTTP request (JSON or XML).
  
+ 
+ ##Explain Bubble sort.
+ 
+ * compares each pair of adjacent items, and swaps them if they are in the wrong order. 
+   This process is repeated for each element in the list until the entire list is sorted.
+   It is not efficient for large lists but can be practical for small datasets or educational
+   purposes. 

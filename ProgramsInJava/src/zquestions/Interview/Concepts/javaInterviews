@@ -1,0 +1,17 @@
+
+1. What is the diffrence bitween controller and rest controller .
+
+ The main difference between a regular Controller and a RestController.
+ Controllers are used to handle traditional web applications that render views,
+ while RestControllers are used to build RESTful web services that return data in 
+ formats such as JSON or XML.
+ 
+ @Controller :
+ It is used when we want to resturn view as a responce .
+ It is Suitablr for traditaional web application .
+ it is used with template . 
+ 
+ @RestController (@Controller + @ResponceBody)
+ It used for building restfull web services .
+ It will be return data in HTTP request (JSON or XML).
+ 

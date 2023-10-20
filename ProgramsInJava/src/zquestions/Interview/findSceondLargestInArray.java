@@ -1,25 +1,29 @@
 package zquestions.Interview;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Set;
 import java.util.TreeSet;
 
 public class findSceondLargestInArray {
 
 	public static void main(String[] args) {
 
-		int[] array = { 10, 5, 20, 25, 30, 15 };
+		List<Integer> v = new ArrayList<>(Arrays.asList(12, 35, 1, 10, 34, 1));
 
-		// Create a TreeSet from the array
-		TreeSet<Integer> treeSet = new TreeSet<>();
-		for (int num : array) {
-			treeSet.add(num);
+		Set<Integer> s = new TreeSet<>(v);
+
+		v.clear();
+
+		for (int value : s) {
+			v.add(value);
 		}
 
-		// Remove the largest element
-		treeSet.remove(treeSet.last());
+		int n = v.size();
 
-		// The last element in the set will be the second largest
-		int secondLargest = treeSet.last();
-		System.out.println("The second largest element in the array is:" + secondLargest);
+		System.out.print("The Second Largest Element in ArrayList is: ");
+		System.out.println(v.get(n - 2));
 
 	}
 

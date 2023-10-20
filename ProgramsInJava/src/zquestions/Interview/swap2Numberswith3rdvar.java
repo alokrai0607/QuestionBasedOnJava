@@ -23,8 +23,6 @@ public class swap2Numberswith3rdvar {
 		System.out.println("Yug ke hath me gaya :"+yug);
 		System.out.println("Nita ke hath me gya :"+nita);
 		
-		
-
 	}
 
 }

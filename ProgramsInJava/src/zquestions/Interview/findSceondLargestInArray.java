@@ -10,21 +10,19 @@ public class findSceondLargestInArray {
 
 	public static void main(String[] args) {
 
-		List<Integer> v = new ArrayList<>(Arrays.asList(12, 35, 1, 10, 34, 1));
-
-		Set<Integer> s = new TreeSet<>(v);
-
-		v.clear();
-
-		for (int value : s) {
-			v.add(value);
-		}
-
-		int n = v.size();
-
-		System.out.print("The Second Largest Element in ArrayList is: ");
-		System.out.println(v.get(n - 2));
-
+	List <Integer> l = new ArrayList<>(Arrays.asList(10 , 50 ,80 , 20 , 30 , 77));
+	
+	Set <Integer> s = new TreeSet<Integer>(l);
+	l.clear();
+	
+	for(int num : s) {
+		l.add(num);
 	}
+	
+	int n = l.size();
+
+	System.out.println(l.get(n-2));
+	}
+	
 
 }

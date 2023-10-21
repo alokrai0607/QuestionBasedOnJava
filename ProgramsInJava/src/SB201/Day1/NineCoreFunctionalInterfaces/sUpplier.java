@@ -7,6 +7,7 @@ public class sUpplier {
 	public static void main(String[] args) {
 
 		Supplier<String> k = () -> "Hello Java";
+		
 		System.out.println(k.get());
 
 	}

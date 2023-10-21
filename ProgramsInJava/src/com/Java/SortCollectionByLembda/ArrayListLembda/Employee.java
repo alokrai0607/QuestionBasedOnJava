@@ -12,7 +12,9 @@ public class Employee {
 
 	public Employee(Integer empId, String empName) {
 		super();
+
 		EmpId = empId;
+
 		EmpName = empName;
 	}
 

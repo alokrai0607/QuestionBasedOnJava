@@ -16,7 +16,6 @@ public class avgList {
 		int n = sc.nextInt();
 
 		System.out.println("Your No will be :");
-
 		for (int i = 0; i < n; i++) {
 			list.add(sc.nextInt());
 		}
@@ -25,6 +24,7 @@ public class avgList {
 		for (int i : list) {
 			sum += i;
 		}
+		
 		int ans = (sum / list.size());
 		System.out.println("OutPut :" + ans);
 	}

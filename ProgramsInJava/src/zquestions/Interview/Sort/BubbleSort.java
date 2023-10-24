@@ -4,36 +4,30 @@ public class BubbleSort {
 
 	public static void main(String[] args) {
 
-		int[] inti = {21,52,75,90,80,57,25,33,64,690};
-		int c = inti.length-1;
+		int[] arr = {21,56,25,85,75,95,58};
 		
-		for(int i=0 ; i<c ; i++) {
-			int f = 0;
-			for(int  j=0 ; j<c ; j++) {
-				
-				//for reverse order
-				//if(inti[j]<inti[j+1]) {
-				// for increasing order
-				if(inti[j]>inti[j+1]) {
-					
-					int t = inti[j];
-					inti[j] = inti[j+1];
-					inti[j+1] = t;
-					f = 1;
-					
+		
+		for(int i=0 ; i<arr.length ; i++) {
+		  boolean flag = false;
+			for(int j=0 ; j<arr.length-1-i;j++) {
+			
+				if(arr[j]<arr[j+1]) {
+				int	temp = arr[j];
+					arr[j] = arr[j+1];
+					arr[j+1] = temp;
+					flag = false;
 				}
 				
+				
 			}
-			if(f == 0) {
+			if (flag = false) {
 				break;
-			}
-			for(int k : inti) {
-				System.out.println(k+" ");
 			}
 		}
 		
-		
-		
+		for(int a : arr) {
+			System.out.println(a+" ");
+		}
 	}
 
 }

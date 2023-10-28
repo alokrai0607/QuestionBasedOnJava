@@ -13,7 +13,7 @@ public class InserctionSort {
 				a[i] = a[i - 1];
 				i = i - 1;
 			}
-			a[i] = temp;
+			    a[i] = temp;
 		}
 		for (int k : a) {
 			System.out.println(k + " ");

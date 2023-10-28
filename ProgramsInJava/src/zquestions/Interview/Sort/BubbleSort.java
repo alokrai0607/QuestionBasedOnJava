@@ -6,19 +6,22 @@ public class BubbleSort {
 
 		int[] arr = { 21, 56, 25, 85, 75, 95, 58, 21, 56, 25, 85, 75, 95, 5821, 56, 25, 85, 75, 95, 58 };
 
-		for(int i=0 ; i<arr.length ; i++) {
+		for (int  i = 0  ; i<arr.length ; i++ ) {
 			
-			boolean f = false ; 
-			for(int  j=0 ; j<arr.length-1-i;j++) {
+		boolean f = false;
+			
+			for(int j = 0 ; j<arr.length-1-i ; j++) {
 				
 				if(arr[j]>arr[j+1]) {
-					int tem = arr[j];
+					int temp = arr[j];
 					arr[j] = arr[j+1];
-					arr[j+1] = tem;
-					f=true;
+					arr[j+1] = temp;
+					f = true;
+					
 				}
+				
 			}
-			if(!f) {
+			if(f==false) {
 				break;
 			}
 		}

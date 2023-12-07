@@ -21,6 +21,7 @@ public class my1JDBC {
 			
 			//Execute the query
 			int row = st.executeUpdate("insert into student values(3,'alok','varanasi','1254425100')");
+			
 			if (row > 0) {
 				System.out.println("Student detail has inserted..");
 			} else {

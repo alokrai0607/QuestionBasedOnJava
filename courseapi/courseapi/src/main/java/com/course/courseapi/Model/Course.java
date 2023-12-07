@@ -1,7 +1,12 @@
 package com.course.courseapi.Model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class Course {
 
+	@Id
 	private int courseid;
 	private String courseName;
 	private String courseDuration;

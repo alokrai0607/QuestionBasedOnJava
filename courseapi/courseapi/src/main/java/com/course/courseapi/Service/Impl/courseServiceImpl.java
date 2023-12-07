@@ -24,7 +24,7 @@ public class courseServiceImpl implements courseService {
 	}
 
 	@Override
-	public Course getCourseById(int courseid) {
+	public Course getCourseById(Integer courseid) {
 		return courserepository.getReferenceById(courseid);
 	}
 
@@ -41,7 +41,7 @@ public class courseServiceImpl implements courseService {
 	}
 
 	@Override
-	public void deleteCourse(int courseid) {
+	public void deleteCourse(Integer courseid) {
 		Course entity = courserepository.getReferenceById(courseid);
 		courserepository.delete(entity);
 	}

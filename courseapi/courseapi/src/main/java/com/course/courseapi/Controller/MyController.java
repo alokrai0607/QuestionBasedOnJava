@@ -33,7 +33,7 @@ public class MyController {
 
 	// Get Course Particularly with courseID .
 	@GetMapping("Courses/{courseid}")
-	public Course getCourseById(@PathVariable int courseid) {
+	public Course getCourseById(@PathVariable Integer courseid) {
 		return this.courseService.getCourseById(courseid);
 	}
 
@@ -51,7 +51,7 @@ public class MyController {
 
 	// Delete course by ID.
 	@DeleteMapping("Courses/{courseid}")
-	public ResponseEntity<HttpStatus> deleteCourse(@PathVariable int courseid) {
+	public ResponseEntity<HttpStatus> deleteCourse(@PathVariable Integer courseid) {
 		try {
 			this.courseService.deleteCourse(courseid);
 			return new ResponseEntity<>(HttpStatus.OK);

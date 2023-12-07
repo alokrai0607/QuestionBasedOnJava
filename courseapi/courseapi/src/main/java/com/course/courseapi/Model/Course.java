@@ -7,7 +7,7 @@ import jakarta.persistence.Id;
 public class Course {
 
 	@Id
-	private int courseid;
+	private Integer courseid;
 	private String courseName;
 	private String courseDuration;
 
@@ -16,18 +16,18 @@ public class Course {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Course(int courseid, String courseName, String courseDuration) {
+	public Course(Integer courseid, String courseName, String courseDuration) {
 		super();
 		this.courseid = courseid;
 		this.courseName = courseName;
 		this.courseDuration = courseDuration;
 	}
 
-	public int getCourseid() {
+	public Integer getCourseid() {
 		return courseid;
 	}
 
-	public void setCourseid(int courseid) {
+	public void setCourseid(Integer courseid) {
 		this.courseid = courseid;
 	}
 

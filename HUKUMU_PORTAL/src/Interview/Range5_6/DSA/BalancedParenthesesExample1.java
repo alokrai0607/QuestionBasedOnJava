@@ -18,6 +18,8 @@ public class BalancedParenthesesExample1 {
 
 			if (current == '{' || current == '[' || current == '(') {
 
+				
+				
 				stack.push(current);
 				continue;
 			}
@@ -29,6 +31,7 @@ public class BalancedParenthesesExample1 {
 			char popChar;
 			switch (current) {
 			case ')':
+				
 				popChar = (char) stack.pop();
 				if (popChar == '{' || popChar == '[')
 					return false;
@@ -39,12 +42,14 @@ public class BalancedParenthesesExample1 {
 					return false;
 				break;
 			case ']':
+				
 				popChar = (char) stack.pop();
 				if (popChar == '(' || popChar == '{')
 					return false;
 				break;
 			}
 		}
+		
 		return (stack.isEmpty());
 	}
 

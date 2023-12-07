@@ -12,7 +12,9 @@ public class SecondLargestInArray {
 
 		if (secondLargest > firstLargest) {
 			int temp = firstLargest;
+			
 			firstLargest = secondLargest;
+			
 			secondLargest = temp;
 		}
 

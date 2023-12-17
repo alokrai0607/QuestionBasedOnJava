@@ -1,22 +1,29 @@
 package zquestions.Interview.Sort;
 
 public class BubbleSort {
-    public static void main(String args[]) {
-      int[] arr = {1,8 , 7 , 6 , 25 , 85 ,0 , 25};
-      
-      for(int i=arr.length-1 ; i>=0 ; i--) {
-    	  for(int j=0 ; j<=i-1 ; j++) {
-    		  if(arr[j]<arr[j+1]) {
-    			  int temp = arr[j];
-    			  arr[j] = arr[j+1];
-    			  arr[j+1] = temp;
-    		  }
-    	  }
-    	  }
-    	  for (int l : arr) {
-    		  System.out.println(l+" ");
-    	  }
-      }
-    }
+	public static void main(String args[]) {
+		int[] arr = { 1, 8, 7, 6, 25, 85, 0, 25 };
 
+		for (int a = 0; a < arr.length; a++) {
+			boolean f = false;
+			for (int b = 0; b < arr.length - 1 - a; b++) {
 
+				if (arr[b] > arr[b + 1]) {
+					int t = arr[b];
+					arr[b] = arr[b + 1];
+					arr[b + 1] = t;
+					f = true;
+				}
+
+			}
+			if (!f) {
+				break;
+			}
+
+		}
+		for (int i : arr) {
+			System.out.println(i + " ");
+		}
+
+	}
+}

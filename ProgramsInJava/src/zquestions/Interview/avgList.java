@@ -12,7 +12,8 @@ public class avgList {
 
 		List<Integer> list = new ArrayList<>();
 
-		System.out.println("please pass Here how many no youare going to pass i your array :");
+		System.out.println("please pass Here how many no youare going to pass  your array :");
+		
 		int n = sc.nextInt();
 
 		System.out.println("Your No will be :");
@@ -26,7 +27,7 @@ public class avgList {
 		}
 		
 		int ans = (sum / list.size());
-		System.out.println("OutPut :" + ans);
+		System.out.println("OutPut is:" + ans);
 	}
 
 }

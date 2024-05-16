@@ -1,0 +1,1137 @@
+CREATE TABLE DEPOSIT(
+	FIELD NAME DATATYPE SIZE,
+    ACTNO VARCHAR(25),
+    CNAME VARCHAR(20),
+    BNAME VARCHAR(20),
+    AMOUNT INT,
+    ADATE DATE
+);
+
+insert into DEPOSIT values(101,"sunil","mgroad",5000.00,'1996-01-04'),
+						 (102,"rahul","karolbagh",3500.00,'1995-11-17'),
+						 (103,"madhuri","chandni",1200.00,"1995-12-17"),
+						 (104,"pramod","mgroad",3000.00,"1996-03-27"),
+						 (105,"sandip","karolbagh",2000.00,"1996-03-31");
+	 
+	  insert into branch values
+     ("vrce","nagpur"),
+     ("karolbagh","delhi"),
+     ("chandni","delhi"),
+     ("mgroad","banglore");
+	 
+	  insert into customer values
+     ("anil","kolkata"),
+     ("rahul","baroda"),
+     ("madhuri","nagpur"),
+     ("pramod","nagpur"),
+     ("sunil","delhi");
+	 
+	  insert into borrow values
+     (201,"anil","vrce",1000.00),
+     (206,"rahul","karolbagh",5000.00),
+     (311,"sunil","mgroad",3000.00),
+     (321,"madhuri","chandni",2000.00),
+     (375,"pramod","mgroad",8000.00);
+	 
+	 create table student(
+	       FIELD DATA TYPE
+           NAME VARCHAR(20)
+           ROLLNO INT
+           BRANCH VARCHAR2(20)
+           CITY VARCHAR2(20));
+		   
+		   
+		   create table student
+           (name varchar(20),rollno int,branch varchar2(20),city varchar2(20));
+		   
+		   create table student(name varchar(20),rollno int,branch varchar(20),city varchar(20));
+		   
+		   insert into student values
+           ("vijay",150,"cse","chennai"),
+           ("sita",201,"etc","kolkata"),
+           ("ravi",300,"eee","delhi"),
+           ("basu",165,"etc","chennai"),
+           ("rasmi",107,"etc","chennai"),
+           ("karan",111,"cse","ctc"),
+           ("rekha",117,"bme","bbsr");
+		   
+		   
+		   
+		   CREATE TABLE student(
+		   id int PRIMARY KEY AUTO_INCREMENT,
+		   roll_no VARCHAR(10) UNIQUE NOT NULL,
+		   name VARCHAR(10) NOT NULL,
+		   cgpa DECIMAL(3,1) DEFAULT (5.0),
+		   registration_date date
+		   );
+		   
+
+		   CREATE TABLE employee(
+		   id int PRIMARY KEY AUTO_INCREMENT,
+		   employee_id VARCHAR(5) UNIQUE NOT NULL,
+		   employee_name VARCHAR(20) NOT NULL,
+		   salary_in_lpa decimal(4,1) NOT NULL DEFAULT(5.0),
+		   date_of_joining date NOT NULL
+		   );
+		   
+		    create table Department(
+               did  int primary key auto_increment,
+               dname  varchar(12) not null,
+               location  varchar(12) not null);
+			   
+			create table Employee(
+              empId int primary key auto_increment,
+               ename varchar(12) not null,
+                address varchar(12),
+               email varchar(20) not null unique,
+                password varchar(12),
+                salary int,
+                deptId int);
+				
+				//*********************************************************************************Student Database************************************************************//
+				
+				
+				create table Admin(
+				Admin_Id  int PRIMARY KEY,
+				Admin_Name varchar(20) NOT NULL,
+				Admin_UName VARCHAR(10),
+				Admin_Pass  VARCHAR(10),
+				Admin_Mobile VARCHAR(10),
+				Admin_Address VARCHAR(25));
+				
+				
+				create table Course(
+				Course_Id int,
+				Course_Name varchar(20),
+				Course_fee int,
+				C_Duration int,
+				T_Seats  int);
+				
+				
+				create table Student(
+				S_RollNo  int(5),
+				S_Name  VARCHAR(20),
+				S_UserName VARCHAR(20),
+				S_Pass  VARCHAR(10),
+				S_Mob  VARCHAR(10),
+				S_Address VARCHAR(50),
+				S_batch VARCHAR(10),
+				S_CourseId int);
+				
+				
+				
+				
+				create table Employee(
+                 	empId int primary key,
+	                name varchar(50),
+	                address  varchar(100),
+	                salary int
+                    );
+					
+					create table Student(
+                 	Roll_no int primary key ,
+	                Name varchar(50),
+	                Marks  int
+                    );
+					
+					
+					insert into Student values(10,"Alok",950);
+				
+				
+			create table product(
+         	productId int primary key,
+	        productName varchar(50),
+	        quantity int,
+	        price int);
+			
+			
+			
+			create table Delivery(
+				 bookingId int  primary key,
+		         orderNumber varchar(100),
+                 pizza varchar(100),
+                 prize int ,
+                 deliveryAddress varchar(100),
+                 created_timestamp time);
+				 
+				 
+				 create table jobseeker(
+	              id  int Primary key ,
+	              email  varchar(200),
+	               address  varchar(200),
+	               mobNo  varchar(12),
+	               category  varchar (50),
+	              experience  int ); 
+				  
+				  create table Domino(
+				   	  bookingId int primary key,               
+		              orderNumber varchar (50),                       
+                      pizza  varchar (50),                          
+                      prize  int ,                             
+                      deliveryAddress varchar(200) ,                     
+                      created_timestamp DateTime );   
+
+
+create table Student(
+	studentCode int Primary key,
+	email varchar(50),
+	address varchar(100),
+	course varchar(50),
+	level int
+);			
+
+create table Employee(
+	empId int primary key,
+	name varchar(100),
+	address varchar(100),
+	salary int
+);		  
+
+
+create table Student(
+
+   id int Primary key, 
+   email varchar(50),
+   address varchar(100),
+   cgpa int);
+   
+   insert into Employee values(1201,"Technical Manager","Gopal",4000);
+   insert into Employee values(1202,"Proof Reader","Manisha",4000);
+   insert into Employee values(1203,"Technical Writer","Masthanvali",4000);
+   insert into Employee values(1204,"Technical Writer","Satish",3000);
+   insert into Employee values(1205,"Technical Manager","Krishna",3000);
+   insert into Employee values(1206,"Proof Reader","Kiran",3500);
+   
+   
+   insert into Player values(11,25,"mahendra dhoni","Cricket");
+   
+ create  Table customer(
+	customerId int primary key,
+	name varchar(50) ,
+	address varchar(300),
+	budget int 
+);
+
+mysql> desc customer;
++------------+--------------+------+-----+---------+-------+
+| Field      | Type         | Null | Key | Default | Extra |
++------------+--------------+------+-----+---------+-------+
+| customerId | int          | NO   | PRI | NULL    |       |
+| name       | varchar(50)  | YES  |     | NULL    |       |
+| address    | varchar(300) | YES  |     | NULL    |       |
+| budget     | int          | YES  |     | NULL    |       |
++------------+--------------+------+-----+---------+-------+
+
+ insert into customer values(11,"Alok","Mumbai",100000);
+ 
+ | Field   | Type         | Null | Key | Default | Extra |
++---------+--------------+------+-----+---------+-------+
+| id      | bigint       | NO   | PRI | NULL    |       |
+| name    | varchar(255) | YES  |     | NULL    |       |
+| surname | varchar(255) | YES  |     | NULL    |       |
++---------+--------------+------+-----+---------+-------+
+
+ insert into person values(33419797245,"Alok","Rai");
+ 
+ -----------------------------------------------------------------------------------------------------------------------------------------------------------
+ 
+ 
+ INSERT INTO Admin (name, email, password) 
+VALUES ('alok', 'saelalok001@gmail.com', '1254425100');
+
+
+INSERT INTO Product (productId,productName, image, price, description, manufacturer, quantity, catId)
+VALUES (1'Bread', 'dummy.jpg', 40.00, 'product descriptionwill be here', 'Parivar', 10, 1);
+
+INSERT INTO Product (productId, productName, price, description, manufacturer, quantity)
+VALUES (1, 'Example Product', 19.99, 'This is an example product description', 'Example Manufacturer', 10);
+
+
+
+
+  ALTER TABLE Customer MODIFY ACono int(50) not null;
+
+
+ALTER table Customer (
+    -> ANo int(20) primary key,
+    -> AName varchar(100) not null,
+    -> Aaddress varchar(200) not null ,
+    -> ACono int(10) Unique not null,
+    -> AcBalance int(10) not null);
+ 
+ 
+ 
+  create table account(    
+  cusid int primary key ,
+  cusName varchar(100) not null ,
+  cusEmail varchar(100) not null Unique ,
+  Accbal int(10) not null default(0) , 
+  ConNo int(10) not null Unique);
+ 
+ INSERT INTO account VALUES (2 , "Rahul" , "rahulBaba001@gmail.com" , 78542 , 8188556644),(3 , "Manyata" , "manimathur@gmail.com" , 852147 , 8258852558);
+ 
+ ALTER TABLE account
+RENAME COLUMN ConNo TO long;
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Certainly! Here are 50 important SQL interview questions that may be asked in your interview:
+
+1. What is SQL?
+
+  SQL serves as a powerful tool for managing, querying, and manipulating data stored in relational databases, making it an essential skill for anyone working with 
+  databases or involved in data-driven applications.
+  
+2. What are the types of SQL commands?
+  
+  SQL commands can be categorized into several types based on their purpose and functionality. The main types of SQL commands include:
+
+		Data Definition Language (DDL) Commands:
+
+		CREATE: Used to create database objects such as tables, indexes, views, and databases themselves.
+		ALTER: Used to modify the structure of existing database objects.
+		DROP: Used to delete database objects such as tables, indexes, views, and databases themselves.
+		TRUNCATE: Used to remove all records from a table, but keep the table structure intact.
+		RENAME: Used to rename existing database objects.
+		
+		Data Manipulation Language (DML) Commands:
+
+		SELECT: Used to retrieve data from one or more tables.
+		INSERT: Used to insert new records into a table.
+		UPDATE: Used to modify existing records in a table.
+		DELETE: Used to delete records from a table.
+		
+		Data Control Language (DCL) Commands:
+
+		GRANT: Used to grant specific privileges or permissions to database users.
+		REVOKE: Used to revoke previously granted privileges or permissions from database users.
+		
+		Transaction Control Language (TCL) Commands:
+
+		COMMIT: Used to permanently save the changes made in a transaction.
+		ROLLBACK: Used to undo the changes made in a transaction.
+		SAVEPOINT: Used to set points within a transaction to which you can later roll back.
+
+
+3. Explain the difference between SQL and MySQL.
+
+ SQL and MySQL are related but distinct concepts:
+
+		SQL (Structured Query Language):
+
+			SQL is a standardized programming language used for managing relational databases.
+			It provides a set of commands for performing various operations such as querying data, modifying database schema, inserting, updating, and deleting records, controlling access to the database, and managing transactions.
+			SQL is a language specification or standard, and it is not a specific database management system (DBMS) itself.
+			It is supported by various relational database management systems, including MySQL, PostgreSQL, Oracle, SQL Server, SQLite, and others.
+
+		MySQL:
+
+			MySQL is a popular open-source relational database management system (RDBMS) that implements the SQL language.
+			It is developed, distributed, and maintained by Oracle Corporation.
+			MySQL is one of the most widely used database systems in the world, known for its reliability, performance, and scalability.
+			It supports various features of the SQL language, including data definition, data manipulation, data control, and transaction control commands.
+			MySQL also provides additional features such as support for stored procedures, triggers, views, and user-defined functions.
+
+
+
+
+4.What is a database?
+
+		A database is an organized collection of structured data stored and managed electronically. It is designed to efficiently store, retrieve, and manipulate data 
+		according to specific requirements. Databases play a crucial role in various applications and industries, ranging from business operations to scientific research 
+		and information management.
+
+
+5. What are the different types of database management systems?
+
+   There are several types of database management systems (DBMS), each designed to handle different types of data and cater to specific requirements. The main types of DBMS include:
+
+	Relational Database Management Systems (RDBMS):
+
+			RDBMS organizes data into tables, where each table consists of rows and columns.
+			It enforces relationships between tables using primary keys and foreign keys.
+			Examples include MySQL, PostgreSQL, Oracle Database, SQL Server, SQLite.
+
+	NoSQL Database Management Systems:
+
+			NoSQL (Not Only SQL) databases are designed to handle unstructured or semi-structured data and provide flexibility and scalability.
+			They can store data in various formats such as key-value pairs, document-oriented, column-oriented, or graph-based.
+			Examples include MongoDB, Cassandra, Redis, Couchbase.
+
+	Object-Oriented Database Management Systems (OODBMS):
+
+			OODBMS stores data in the form of objects, which can contain attributes and methods.
+			It is well-suited for object-oriented programming languages and applications.
+			Examples include db4o, ObjectStore.
+
+6. What is a relational database?
+
+    A relational database is a type of database management system (DBMS) that organizes data into tables consisting of rows and columns, 
+	where each table represents an entity and each row represents a record or instance of that entity.
+	
+	Tabular Structure: Data is organized into tables, also known as relations, where each table has a unique name and consists of rows and columns. 
+	                   Each row represents a single record or tuple, while each column represents a single attribute or field.
+
+    Relations and Entities: Tables represent relations or entities within the database schema. Each table corresponds to a specific entity type, such as customers, 
+	                        products, or orders.
+
+    Primary Keys: Each table has a primary key, which uniquely identifies each record in the table. The primary key ensures that each row in the table is uniquely 
+	              identifiable and serves as a reference for establishing relationships between tables.
+
+    Foreign Keys and Relationships: Tables can be related to each other through foreign keys, which establish relationships between entities. A foreign key in one table
+                	refers to the primary key in another table, linking the two tables together.
+
+    Normalization: Relational databases adhere to normalization principles to eliminate data redundancy and improve data integrity. Normalization involves breaking down
+                	large tables into smaller, more manageable tables and organizing them to minimize data duplication.
+
+    Structured Query Language (SQL): Relational databases use SQL (Structured Query Language) as the standard language for querying and manipulating data. SQL provides a set of commands for creating, modifying, and querying relational databases, making it easy to interact with the data.
+
+7. What is a primary key?
+
+			A primary key is a special column or combination of columns in a relational database table that uniquely identifies each record (row) in that table.
+			It serves as a unique identifier for the records in the table and ensures that each record can be uniquely identified and accessed.
+
+		Key characteristics of a primary key include:
+
+		Uniqueness: Every value in the primary key column(s) must be unique within the table. No two records can have the same value for the primary key.
+
+		Non-nullability: The primary key column(s) cannot contain NULL values. Each record must have a value in the primary key column(s).
+
+		Permanence: The primary key values should be stable and not change over time. Once assigned, a primary key value should ideally remain unchanged for 
+		            the lifetime of the record.
+
+		Minimality: A primary key should consist of as few columns as possible to uniquely identify each record. Typically, a single column is designated as 
+		            the primary key, but it can also be composed of multiple columns (composite key) if necessary.
+
+
+
+
+8. What is a foreign key?
+      
+	  A foreign key is a column or a set of columns in a relational database table that establishes a link between data in two tables. 
+	  It defines a relationship between the tables based on the values of the foreign key column(s) and the primary key column(s) of another table. 
+	  In other words, a foreign key in one table refers to the primary key in another table, creating a parent-child relationship between the tables.
+
+		Key characteristics of a foreign key include:
+
+				References: A foreign key column in one table references the primary key column(s) in another table. It points to the primary key value(s)
+							of the related record(s) in the referenced table.
+
+				Data Integrity: Foreign keys enforce referential integrity, ensuring that the values in the foreign key column(s) of a child table must match 
+								an existing value in the primary key column(s) of the parent table. This prevents orphaned records and maintains data consistency.
+
+				Relationship Type: Foreign key relationships can be one-to-one, one-to-many, or many-to-many, depending on how the foreign key and primary key columns
+									are defined in the tables.
+
+				Cascade Actions: Foreign key constraints can specify cascade actions to define the behavior when records in the referenced table are updated or deleted. 
+									Common cascade actions include CASCADE (propagate changes to child records), SET NULL (set foreign key values to NULL), or RESTRICT 
+									(prevent updates or deletions that violate referential integrity).
+
+
+9. What is normalization and why is it important?
+
+   
+		Normalization is the process of organizing and structuring data in a relational database to reduce redundancy and dependency, improve data integrity, and 
+		optimize database performance. It involves breaking down large tables into smaller, more manageable tables and organizing them to eliminate data anomalies
+		 and inconsistencies.Overall, normalization is important for ensuring the efficiency, reliability, and scalability of relational databases. It helps maintain 
+		 data consistency and integrity, reduces the risk of data anomalies, and improves database performance, making it an essential concept in database design and 
+		 management.
+		 
+10. What is denormalization?
+    
+	denormalization involves duplicating data or introducing redundant relationships between tables to optimize read operations.
+	It is commonly used to optimize queries that involve aggregations, joins, or complex filtering conditions, allowing for faster data retrieval and analysis.
+	Overall, denormalization is a database optimization technique that involves introducing redundancy into a normalized database schema to improve query 
+	performance and simplify data retrieval operations. It is important to carefully consider the trade-offs between performance and data integrity when denormalizing 
+	a database schema.
+
+
+11. What are the different types of SQL joins?
+
+   
+SQL joins are used to combine rows from two or more tables based on a related column between them. There are several types of SQL joins, each serving a specific purpose. The main types of SQL joins include:
+
+		INNER JOIN:
+
+				Returns rows from both tables where the join condition is met.
+				Only the rows with matching values in both tables are included in the result set.
+				Syntax: SELECT * FROM table1 INNER JOIN table2 ON table1.column = table2.column;
+
+
+		LEFT JOIN (or LEFT OUTER JOIN):
+
+				Returns all rows from the left table (first table) and the matched rows from the right table (second table).
+				If there is no matching row in the right table, NULL values are included for the columns of the right table.
+				Syntax: SELECT * FROM table1 LEFT JOIN table2 ON table1.column = table2.column;
+
+		RIGHT JOIN (or RIGHT OUTER JOIN):
+
+				Returns all rows from the right table (second table) and the matched rows from the left table (first table).
+				If there is no matching row in the left table, NULL values are included for the columns of the left table.
+				Syntax: SELECT * FROM table1 RIGHT JOIN table2 ON table1.column = table2.column;
+
+		FULL JOIN (or FULL OUTER JOIN):
+
+				Returns all rows from both tables, matching rows from both tables where the join condition is met.
+				If there is no matching row in one of the tables, NULL values are included for the columns of the other table.
+				Syntax: SELECT * FROM table1 FULL JOIN table2 ON table1.column = table2.column;
+
+		CROSS JOIN:
+
+				Returns the Cartesian product of rows from both tables, where each row in the first table is combined with each row in the second table.
+				It does not require a join condition, and it can result in a large number of rows if the tables have many rows.
+				Syntax: SELECT * FROM table1 CROSS JOIN table2;
+
+		SELF JOIN:
+
+				Performs a join between a table and itself, typically to compare rows within the same table or to create hierarchical queries.
+				It requires the use of table aliases to differentiate between the two instances of the same table.
+				Syntax: SELECT * FROM table1 t1 INNER JOIN table1 t2 ON t1.column = t2.column;
+				
+			These SQL join types provide different ways to combine data from multiple tables based on the specified join conditions, allowing for complex 
+			querying and data retrieval operations in relational databases.
+	
+	
+12. Explain the difference between INNER JOIN and OUTER JOIN.
+
+
+		The main difference between INNER JOIN and OUTER JOIN in SQL lies in how they handle unmatched rows between the tables being joined.
+
+		Here's a breakdown of the differences between INNER JOIN and OUTER JOIN:
+
+	INNER JOIN:
+
+		An INNER JOIN returns only the rows from both tables where the join condition is met.
+		If there is no matching row in one of the tables, those rows are excluded from the result set.
+		It returns only the intersection of the rows between the tables, where the join condition evaluates to true.
+		INNER JOIN is the default type of join in SQL, and it is commonly used when you only want to retrieve rows that have matching values in both tables.
+		
+	OUTER JOIN:
+
+		An OUTER JOIN returns all rows from one or both tables being joined, along with matching rows where the join condition is met.
+		If there is no matching row in one of the tables, the OUTER JOIN includes NULL values for columns from the table with no match.
+		OUTER JOIN allows you to include unmatched rows from one or both tables in the result set, ensuring that no data is lost.
+		There are different types of OUTER JOINs: LEFT OUTER JOIN, RIGHT OUTER JOIN, and FULL OUTER JOIN, each determining which table's rows to include in the result set.
+
+12. What is a subquery?
+
+   
+	A subquery, also known as a nested query or inner query, is a query nested within another SQL query. It allows you to perform a query inside another query, 
+	enabling you to retrieve data based on the results of another query.
+
+13. Key characteristics of subqueries include:
+
+			Nested Structure: A subquery is enclosed within parentheses and is embedded inside the WHERE, HAVING, or FROM clause of the outer query.
+
+			Dependent Query: The inner query depends on the results of the outer query, and it is executed each time the outer query is evaluated.
+
+			Single-Row or Multi-Row Result: Depending on the context, a subquery can return either a single value or multiple rows of data.
+
+
+
+14. What is an index and why is it used?
+
+      index is a database object that is used to improve the performance of queries by enabling faster data retrieval. It is a data structure associated 
+	  with a table or a view that allows for efficient lookup and retrieval of rows based on the values of one or more columns. Indexes are created on columns
+	  that are frequently used in search conditions, join conditions, or order by clauses to speed up data retrieval operations.
+	  
+	  Fast Data Retrieval:
+	  Ordered Structure: 
+	  Improved Query Performance:
+	  
+	  Overall, indexes are used in SQL databases to optimize query performance, enable fast data retrieval, enforce constraints, and improve overall database efficiency. 
+	  They are essential for handling large volumes of data and supporting fast, responsive database applications. However, it's important to carefully consider the design
+	  and usage of indexes to strike the right balance between query performance and data modification overhead.
+	  
+	  
+15. What is the difference between DELETE and TRUNCATE?
+    
+	The main difference between DELETE and TRUNCATE in SQL lies in their functionality and behavior:
+
+ DELETE:
+
+		DELETE is a DML (Data Manipulation Language) statement used to remove one or more rows from a table based on a specified condition or criteria.
+		DELETE can be used to selectively remove specific rows from a table based on a WHERE clause, allowing for fine-grained control over which rows are deleted.
+		DELETE operations are logged in the transaction log and can be rolled back using the ROLLBACK statement if needed.
+		DELETE triggers (if defined) are fired for each deleted row, allowing for additional processing or actions to be performed.
+
+
+ TRUNCATE:
+
+		TRUNCATE is a DDL (Data Definition Language) statement used to remove all rows from a table, effectively emptying the entire table.
+		TRUNCATE does not use a WHERE clause, and it removes all rows from the table without considering any conditions.
+		TRUNCATE operations are not logged in the transaction log, resulting in faster performance compared to DELETE, especially for large tables.
+		TRUNCATE resets any identity columns or sequence values associated with the table to their initial seed value.
+		TRUNCATE does not fire any triggers associated with the table, so any trigger logic or processing defined on the table will not be executed.
+  
+    In summary, the main differences between DELETE and TRUNCATE are:
+
+		DELETE is used to selectively remove rows based on conditions, while TRUNCATE removes all rows from a table.
+
+		DELETE operations are logged and can be rolled back, while TRUNCATE operations are not logged and cannot be rolled back.
+
+		DELETE triggers are fired for each deleted row, while TRUNCATE does not trigger any associated logic or processing.
+
+		TRUNCATE is generally faster and more efficient for removing all rows from a table, especially for large tables, but it 
+		does not offer the same level of control or logging as DELETE.
+
+
+16. What is the difference between CHAR and VARCHAR data types?
+
+    The main difference between CHAR and VARCHAR data types in SQL lies in their storage and behavior:
+
+	CHAR:
+
+		CHAR is a fixed-length character data type that stores strings of a specific length.
+		When you define a CHAR column, you specify a fixed length for the column, such as CHAR(10), which means the column will always store strings of exactly 10 characters.
+		CHAR pads strings with spaces to the specified length, ensuring that each stored value occupies the entire column width.
+		CHAR columns are space-padded, meaning if you insert a shorter string than the specified length, spaces are added to make it the specified length.
+		CHAR is useful for storing strings of a consistent length, such as postal codes or fixed-length codes, where the length of the data is known and consistent.
+	VARCHAR:
+
+		VARCHAR is a variable-length character data type that stores strings of varying lengths.
+		When you define a VARCHAR column, you specify a maximum length for the column, such as VARCHAR(255), which means the column can store strings of up to 255 characters.
+		VARCHAR does not pad strings with spaces, so it only uses the amount of storage necessary to store the actual string data.
+		VARCHAR columns are more space-efficient than CHAR columns when storing variable-length strings, as they only use the amount of storage needed for the actual data.
+		VARCHAR is suitable for storing strings of varying lengths, such as names, addresses, or descriptions, where the length of the data may vary.
+
+17.	What is the purpose of the GROUP BY clause?
+
+    The GROUP BY clause in SQL is used to group rows that have the same values into summary rows, typically for the purpose of performing aggregate functions on the grouped data.
+	It allows you to perform calculations or apply aggregate functions to subsets of data based on common criteria, such as grouping sales data by product category or employee
+	department.     
+	  
+	Overall, the GROUP BY clause is a powerful feature of SQL that allows you to group and aggregate data based on common criteria, enabling you to generate summary reports,
+	perform data analysis, and derive meaningful insights from your data.
+
+
+18.	What is the difference between WHERE and HAVING clauses?
+
+    WHERE Clause:
+
+			The WHERE clause is used to filter rows of data before any grouping or aggregation occurs.
+			It is applied to individual rows of data in the original dataset, filtering rows based on specific conditions or criteria.
+			The WHERE clause is typically used with SELECT, UPDATE, DELETE, and other DML (Data Manipulation Language) statements.
+			It cannot be used with aggregate functions like SUM(), AVG(), COUNT(), etc., because these functions operate on grouped data.
+			
+	HAVING Clause:
+
+			The HAVING clause is used to filter rows of data after grouping and aggregation have been performed.
+			It is applied to groups of data generated by the GROUP BY clause, filtering groups based on aggregate conditions or criteria.
+			The HAVING clause is typically used with SELECT statements that include GROUP BY, allowing you to filter groups based on aggregate results.
+			It can be used with aggregate functions like SUM(), AVG(), COUNT(), etc., because these functions operate on grouped data.
+			
+19.	What is the ORDER BY clause used for?
+
+      
+			The ORDER BY clause in SQL is used to sort the rows of a result set based on one or more columns. It allows you to specify the order in which the 
+			rows should be displayed in the final output. The ORDER BY clause can be applied to SELECT queries to sort the result set in ascending or descending order.
+			
+			Key purposes of the ORDER BY clause include:
+			
+			Sorting Rows:
+			Ascending or Descending Order: 
+			Ordering Results for Presentation
+			Analytical Functions:
+			
+			Overall, the ORDER BY clause is a powerful feature of SQL that allows you to control the order in which rows are displayed in the result set. 
+			It is commonly used to sort query results for presentation, analysis, and reporting purposes, ensuring that the data is presented in a logical 
+			and organized manner.
+			
+			
+			
+20.	What is the difference between UNION and UNION ALL?
+    
+	The main difference between UNION and UNION ALL in SQL lies in how they handle duplicate rows:
+
+	UNION:
+
+		The UNION operator is used to combine the results of two or more SELECT queries into a single result set.
+		When using UNION, duplicate rows are automatically removed from the result set. Only distinct rows are included in the final output.
+		The columns in the SELECT queries that are being combined must be of the same data type and in the same order.
+
+	UNION ALL:
+
+		The UNION ALL operator is also used to combine the results of two or more SELECT queries into a single result set.
+		Unlike UNION, UNION ALL does not remove duplicate rows from the result set. It includes all rows from all SELECT queries, even if there are duplicates.
+
+		Because UNION ALL does not perform duplicate elimination, it is typically faster than UNION, especially when dealing with large result sets or when you 
+		know that there are no duplicates.
+		
+		
+		If you need to include all rows from all SELECT queries and do not want to remove duplicates, you should use UNION ALL. If you want to remove duplicates 
+		and only include distinct rows in the result set, you should use UNION.
+
+21.	What is a trigger?
+
+    trigger is a database object that automatically executes in response to certain events occurring in the database
+	
+	-Event-Driven Execution:
+	-Automatic Execution: 
+	-Defined Actions:
+	-Timing:
+	-Scope: 
+	
+22. What is the purpose of the COMMIT and ROLLBACK statements?
+
+     In summary, the main purposes of the COMMIT and ROLLBACK statements are:
+
+		COMMIT is used to permanently save the changes made by a transaction to the database.
+		ROLLBACK is used to undo or cancel the changes made by a transaction and restore the database to its state before the transaction began.
+		These statements ensure the atomicity and durability of transactions, allowing for consistent and reliable data management within a database.
+
+
+23. What is a deadlock in SQL?
+
+		In SQL, a deadlock is a situation that occurs when two or more transactions are unable to proceed because each transaction is holding a lock on a 
+		resource that the other transaction requires. As a result, the transactions become deadlocked, leading to a state where none of the transactions can
+		make progress, and the system may appear to be frozen.
+		
+		Mutual Dependency:
+		Blocking and Waiting: 
+		
+		
+24. How do you handle null values in SQL?
+        
+		Handling null values in SQL involves various techniques to manage, identify, and manipulate nulls within the database. Here are some common approaches:
+		
+		Checking for Nulls:
+		Replacing Nulls:
+		Handling Nulls in Calculations:
+		Aggregating Data with Nulls:
+		Sorting Nulls:
+		Inserting Nulls:
+		Updating Nulls:
+		
+		
+		
+		
+25. What is the purpose of the EXPLAIN keyword in SQL?
+
+
+     The EXPLAIN keyword in SQL is used to obtain information about the execution plan of a SQL query. It provides insight into how the database engine processes
+	 the query and accesses the underlying data, helping to optimize query performance and identify potential bottlenecks.
+	 
+	 Key purposes of the EXPLAIN keyword include:
+	 Query Optimization:
+	 Access Path Analysis:
+	 Cost Estimation:
+	 Index Usage Analysis:
+	 Join Order Optimization:
+	 Identifying Slow Queries:
+	 
+26. Explain the concept of database normalization.
+    
+	Database normalization is the process of organizing and structuring the data in a relational database to reduce redundancy and dependency, improve data integrity,
+	and optimize database performance. It involves breaking down large tables into smaller, related tables and defining relationships between them. The goal of normalization 
+	is to eliminate data anomalies and ensure that each piece of data is stored only once and in the most appropriate place.
+
+	The process of normalization typically involves several normal forms, each addressing specific types of data redundancy and dependency:
+	First Normal Form (1NF):
+	Second Normal Form (2NF):
+	Third Normal Form (3NF):
+	
+	Key concepts and benefits of normalization include:
+	
+	Data Integrity:
+	Improved Structure: 
+	Optimized Performance: 
+	Simplified Maintenance:
+	
+	Overall, normalization is a critical aspect of database design that helps ensure data integrity, optimize database performance, and simplify maintenance and development
+	tasks. By following normalization principles, database designers can create robust and efficient database schemas that meet the needs of their applications.
+
+27. What is a constraint in SQL?
+
+		In SQL, a constraint is a rule or restriction imposed on a column or a set of columns in a table to enforce data integrity and ensure the accuracy, 
+		consistency, and validity of data stored in the database. Constraints define the permissible values and conditions that data must satisfy, preventing 
+		invalid or incorrect data from being entered into the database.
+
+	Common types of constraints in SQL include:
+	NOT NULL Constraint:
+	UNIQUE Constraint:
+	PRIMARY KEY Constraint:
+	FOREIGN KEY Constraint:
+	CHECK Constraint:
+	
+	Constraints play a crucial role in maintaining the integrity and consistency of data in a relational database. By defining constraints, you can enforce business rules, 
+	prevent data entry errors, and ensure that the database remains accurate and reliable over time.
+
+
+
+
+
+28. What is the difference between UNIQUE and PRIMARY KEY constraints?
+
+		The UNIQUE and PRIMARY KEY constraints in SQL serve similar purposes in that they both enforce uniqueness on a column or set of columns in a table. 
+		However, there are key differences between them:
+		
+		Uniqueness:
+
+		UNIQUE Constraint: A UNIQUE constraint ensures that all values in the specified column(s) are unique, meaning that no two rows can have the same value(s) for the column(s).
+		Multiple UNIQUE constraints can be defined on a table, and NULL values are allowed (except for columns defined as NOT NULL).
+		PRIMARY KEY Constraint: A PRIMARY KEY constraint is a special type of UNIQUE constraint that uniquely identifies each row in a table. It enforces both uniqueness and 
+		NOT NULL constraints on the specified column(s), and only one PRIMARY KEY constraint can be defined per table.
+		
+		Usage:
+
+		UNIQUE Constraint: Typically used to enforce the uniqueness of values in a column or set of columns, without necessarily identifying individual rows uniquely.
+		PRIMARY KEY Constraint: Used to uniquely identify each row in a table and serve as a reference point for relationships with other tables (through FOREIGN KEY constraints).
+
+		NULL Values:
+
+		UNIQUE Constraint: Allows multiple NULL values in the column(s) unless the column(s) is explicitly defined as NOT NULL.
+		PRIMARY KEY Constraint: Does not allow NULL values in the column(s) defined as the primary key. All columns included in the primary key must have a value for every row.
+
+		Table Design:
+
+		UNIQUE Constraint: Can be applied to any column(s) in a table, and multiple UNIQUE constraints can be defined on the same table.
+		PRIMARY KEY Constraint: Typically applied to one or more columns that uniquely identify each row in the table. It is a fundamental aspect of the table's design and
+		relationship with other tables.
+		
+	In summary, while both UNIQUE and PRIMARY KEY constraints enforce uniqueness, the PRIMARY KEY constraint has additional constraints (NOT NULL) and serves as the 
+	primary means of identifying individual rows in a table. The choice between them depends on the specific requirements and design considerations of the database schema.
+	
+	
+	
+29. How do you add a new column to an existing table?
+
+  querie :  ALTER TABLE table_name ADD column_name datatype [constraints];
+  example : ALTER TABLE employees ADD email VARCHAR(255) NOT NULL;
+
+
+30. How do you remove a column from an existing table?
+
+  Queries : ALTER TABLE table_name DROP COLUMN column_name;
+  Example : ALTER TABLE employees DROP COLUMN email;
+
+
+31. How do you rename a table in SQL?
+
+  Queries : ALTER TABLE current_table_name RENAME TO new_table_name;
+  Example : ALTER TABLE employees RENAME TO staff;
+
+
+32. What is the purpose of the LIKE operator in SQL?
+
+		The LIKE operator in SQL is used to search for patterns in string data. It is primarily used in conjunction with the SELECT statement's WHERE clause to filter rows
+		based on a specified pattern match. The LIKE operator allows for wildcard characters to be used within the pattern, providing flexibility in matching strings.
+		
+		Key purposes of the LIKE operator include:
+		
+		Pattern Matching:
+
+		The LIKE operator allows you to search for strings that match a specific pattern, rather than exact values. This is useful for performing partial string 
+		matches or searching for values that follow a certain format.
+		
+		Wildcard Matching:
+
+		Wildcard characters such as % (percent sign) and _ (underscore) can be used with the LIKE operator to represent any sequence of characters or a single character, 
+		respectively. This allows for more flexible pattern matching.
+		
+		Text Search:
+
+		The LIKE operator is commonly used for text search operations, such as finding all rows where a particular column contains a specific word or phrase.
+		
+		Data Filtering:
+
+		By combining the LIKE operator with the WHERE clause in a SELECT statement, you can filter rows based on specific criteria, such as finding all employees
+		whose last names start with 'S' or all products whose names contain 'apple'.
+		
+		Regular Expression Matching (in some database systems):
+
+		Some database systems support regular expression patterns with the LIKE operator, allowing for more advanced pattern matching capabilities.
+		
+		
+33. What is the difference between TRUNCATE and DELETE commands?
+
+		In summary, while both TRUNCATE and DELETE are used to remove data from a table, they have different behaviors and implications. DELETE is more flexible and 
+		transactionally safe, allowing for selective removal of data with logging and trigger execution. TRUNCATE, on the other hand, is faster and resets identity 
+		columns but is non-transactional and does not trigger constraints or execute triggers. The choice between them depends on the specific requirements and constraints
+		of the situation.
+		
+		
+34. How do you retrieve the current date and time in SQL?
+
+        In SQL, you can retrieve the current date and time using built-in functions provided by the database management system. The specific function may vary depending 
+		on the database system you are using. Here are some common functions used to retrieve the current date and time:
+		
+		CURRENT_DATE: Returns the current date without the time component.
+		SELECT CURRENT_DATE;
+
+		CURRENT_TIME: Returns the current time without the date component.
+		SELECT CURRENT_TIME;
+
+		CURRENT_TIMESTAMP (or NOW()): Returns the current date and time.
+		SELECT CURRENT_TIMESTAMP;
+		-- or
+		SELECT NOW();
+		
+		GETDATE() (for Microsoft SQL Server):
+		SELECT GETDATE();
+
+		SYSDATE (for Oracle):
+		SELECT SYSDATE FROM DUAL; -- DUAL is a dummy table in Oracle
+
+
+35. How do you calculate the total number of records in a table?
+
+    Queries : SELECT COUNT(*) AS total_records FROM table_name;
+	Example : SELECT COUNT(*) AS total_records FROM employees;
+
+	Queries : SELECT COUNT(column_name) AS total_records FROM table_name;
+
+36. How do you find duplicate records in a table?
+
+    To find duplicate records in a table in SQL, you can use a combination of the GROUP BY clause and the HAVING clause along with aggregate functions like COUNT().
+	Here's a general approach to finding duplicate records:
+	
+				SELECT column1, column2, ..., columnN, COUNT(*) AS duplicate_count
+				FROM table_name
+				GROUP BY column1, column2, ..., columnN
+				HAVING COUNT(*) > 1;
+
+37. What is a self-join in SQL?
+
+			A self-join in SQL is a type of join where a table is joined with itself. This means that the table is referenced twice in the query, with each 
+			instance given a unique alias. Self-joins are useful for comparing rows within the same table or for hierarchical data structures where a record 
+			relates to another record within the same table.
+
+
+38. How do you perform pagination in SQL?
+
+		Pagination in SQL is the process of splitting query results into smaller, manageable chunks or pages. This is commonly used in web applications to display
+		a limited number of records per page, allowing users to navigate through large datasets easily.
+		
+		To perform pagination in SQL, you typically use the LIMIT (or equivalent) and OFFSET clauses. The LIMIT clause restricts the number of rows returned by the 
+		query, while the OFFSET clause specifies the starting point from which to retrieve rows. Together, they allow you to fetch a specific "page" of results.
+		
+		
+		SELECT columns FROM table ORDER BY some_column LIMIT page_size OFFSET offset_value;
+		SELECT * FROM employees ORDER BY employee_id LIMIT 10 OFFSET 10;
+		
+		This query fetches the second page of results, returning records 11-20 from the employees table.
+
+*******************************************************************************************************************************************
+*****************************************************       Prectice    *******************************************************************
+
+Create a table named students with columns: student_id (int, primary key), student_name (varchar), age (int), and grade (varchar).
+
+    create table students (
+    student_id int primary key ,
+    student_name varchar(50) not null ,
+    age int ,
+    grade varchar(10) not null );
+
+
+Insert three records into the students table.
+
+	insert into students (student_id , student_name , age , grade) values (2 , "Manyata" , 11 , "B+");
+	
+	INSERT INTO students (student_id , student_name, age, grade) 
+    VALUES 
+    (5,'John', 25, 'C'),
+    (6,'Alice', 22, 'B'),
+    (7,'Bob', 24, 'B+'),
+    (8,'Emily', 26, 'A'),
+    (9,'Michael', 23, 'A+'),
+    (10,'Sophia', 21, 'B'),
+    (11,'Daniel', 27, 'C'),
+    (12,'Olivia', 20, 'B+'),
+    (13,'William', 28, 'A'),
+    (14,'Emma', 29, 'A');
+
+Update the age of the student with student_id 2 to 20.
+
+	UPDATE students SET age = 30 WHERE student_id = 1;
+	Update students set grade = "B" where student_name = "Dravyansh";
+
+
+Delete the student with student_id 5 from the students table.
+
+	Delete from students where student_id = 5 ;
+
+Create an index on the student_name column in the students table.
+
+   CREATE INDEX idx_student_name ON students (student_name);
+
+
+Retrieve all columns from the students table.
+
+	SELECT * FROM students;
+
+
+Retrieve only the student_name column from the students table.
+
+	SELECT student_name FROM students;
+
+
+Retrieve distinct values of the grade column from the students table.
+
+		select distinct	grade from students ;
+
+Retrieve students whose age is greater than 18.
+
+		select * from students where age > 18 ;
+
+Retrieve students whose name starts with 'A'.
+
+		select * from students where student_name LIKE "A_%" ;
+
+Retrieve students sorted by their age in descending order.
+
+		SELECT * FROM students ORDER BY age ASC;
+
+Retrieve students sorted by their grade in ascending order and age in descending order.
+
+		SELECT * FROM students ORDER BY grade DESC;
+
+Calculate the average age of all students.
+
+		select SUM(age)/count(*) as avg from students ;
+
+Count the number of students in each grade.
+
+       SELECT grade, COUNT(*) AS grade_count FROM students GROUP BY grade;
+
+Find the highest age among all students.
+
+		SELECT MAX(age) AS highest_age FROM students;
+
+Retrieve the top 5 oldest students.
+
+		SELECT * FROM students ORDER BY age DESC LIMIT 5;
+
+
+Alter the students table to add a new column named city (varchar).
+
+		ALTER TABLE students ADD city VARCHAR(50);
+
+Update the city column of the student with student_id 1 to 'New York'.
+
+	   UPDATE students SET city = 'New York' WHERE student_id = 1;
+
+
+Add a foreign key constraint to the students table referencing a schools table on the school_id column.
+
+		ALTER TABLE students
+		ADD CONSTRAINT fk_school_id_students
+		FOREIGN KEY (school_id)
+		REFERENCES schools(school_id);
+
+
+Drop the grade column from the students table.
+
+		ALTER TABLE students DROP COLUMN grade;
+		
+##############################################################################################################################################################
+#######################################################  Prectice ############################################################################################
+0. DROP DATABASE LEARN_SQL ;
+1. create database LEARN_SQL;
+2. show databases;
+3. use learn_sql;
+4. Show Tables ;
+5.Create a table named employees with columns: employee_id (int, primary key), employee_name (varchar), department (varchar), and salary (decimal).
+
+    create table employees (
+	employee_id int primary key auto_increment,
+	employee_name varchar(50) not null , 
+	emp_address varchar(100) ,
+	department varchar(50) not null , 
+	salary decimal(10,2) );
+	
+6. DESC employees ; 
+
+
+7. Insert three records into the employees table.
+
+
+	insert into employees (employee_name ,emp_address , department , salary )
+    values
+    ('Alok','Varanasi','Development',125000.00),
+	('Vishal','Varanasi','Admin',95000.00),
+	('Mohit','Sobhadra','HR',12000),
+	('Pramod','Roertsganj','Sales',200000),
+	('Ravi','Gularbhoj','Purchase',115000.00),
+	('sandeep','Jabalpur','Sales',135000),
+	('Rajat','Ahamdabad','MIS',125000.00),
+	('Ashok','Lucknow','Medical',225000.00),
+	('Manyata','Rudrapur','Insurence',95000.00),
+	('Anand','Banglore','Police',121000.00),
+	('Ajay','Bikapur','IT',121000);
+
+Add Extra Column after Creation of table ; 
+8. ALTER TABLE employees add Contact_emp int;
+
+Modify Datatype After Creation of table . 
+9. ALTER TABLE Employees MODIFY Contact_emp varchar(10) ;
+
+Change column name ;
+10. ALTER TABLE Employees RENAME COLUMN Contact_emp to Con_Emp ;
+
+Remove Column 
+11. ALTER TABLE employees DROP COLUMN Emp_Con ;
+
+UPDATE Data in Column .
+12. UPDATE employees SET employee_name = 'Ravi Patel' , emp_address = 'dam' , Emp_Department = 'CMR' WHERE employee_id = 5 ;
+
+Alias Name .
+
+13.
+	Way-1
+	select employee_id as id , employee_name as name , emp_address as address , Emp_Department as Department , Emp_Salary as salary from employees ;
+	Way-2
+ 	select employee_id 'id ', employee_name  'name' , emp_address 'address' , Emp_Department 'Department' , Emp_Salary 'salary' from employees ;
+	Way-3	
+	select employee_id id , employee_name  name , emp_address address , Emp_Department Department , Emp_Salary salary from employees ;
+		 
+
+  FIler the row useing WHERE Clause . 
+  
+     useing AND
+14.  select * from employees WHERE employee_name = 'Alok' and Emp_Department = 'Development' ; 
+
+     useing Or
+15.  select * from employees WHERE employee_name = 'Alok' OR Emp_Department = 'Insurence' ;
+  
+     filter based on City
+16.  select * from employees where emp_address = 'Lucknow';
+
+
+     Used Not Oprater . 
+17.  Select * from employees where emp_address != 'Lucknow';
+  
+  ORDER By
+18.   Select * from employees ORDER By emp_address ;
+		Select * from employees ORDER By emp_address desc;
+  
+  Limit
+19.  Select * from employees ORDER By emp_address desc limit 3;
+  
+  OFFSET + LIMIT
+20.  Select * from employees ORDER By employee_name asc limit 3 OFFSET 2;
+
+Aggregate Functions :
+
+AVG
+21. 	select avg(Emp_Salary) from employees ;
+  
+SUM
+   
+22. 	select SUM(Emp_Salary) from employees ;
+	
+Count
+
+23.  Select Count(employee_name) from employees;
+   
+String Functions :
+
+24. Length (String)
+
+  select employee_name 'name' , LENGTH(employee_name) 'LENGTH' from employees ; 
+  
+ 
+  
+
+

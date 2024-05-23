@@ -11,7 +11,7 @@ public class StreamExample {
         list.add("Apple");
         list.add("Watermelon");
         list.add("Lemon");
-        list.add("cherry");
+        list.add("Cherry");
 
         List<String> sortedList = list.stream()
                                       .sorted()

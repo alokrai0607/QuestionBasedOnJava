@@ -8,14 +8,14 @@ public class MergeSort {
 
 	public static void main(String[] args) {
 		// Define an input array with some values
-		int[] inputArray = { 48, 36, 13, 52, 19, 94, 21 };
+		int[] inArr = { 48, 36, 13, 52, 19, 94, 21 };
 		// Create an instance of MergeSort class
 		MergeSort ms = new MergeSort();
 		// Call the sort method to sort the inputArray
-		ms.sort(inputArray);
+		ms.sort(inArr);
 
 		// Print the sorted array
-		for (int i : inputArray) {
+		for (int i : inArr) {
 			System.out.println(i + " ");
 		}
 	}
@@ -41,6 +41,7 @@ public class MergeSort {
 			// Recursively divide the right half of the array
 			divideArray(middle + 1, higherIndex);
 
+			
 			// Merge the divided arrays
 			mergeArray(lowerIndex, middle, higherIndex);
 		}
